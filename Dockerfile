@@ -5,6 +5,7 @@ MAINTAINER Eugene Cheah <eugene@picoded.com>
 RUN apt-get update && \
 	apt-get install -y maven && \
 	apt-get install -y tomcat7 && \
+	apt-get install -y git && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* && \
 	rm -rf /var/cache/oracle-jdk8-installer;
