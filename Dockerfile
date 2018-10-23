@@ -15,6 +15,7 @@ RUN apt-get update && \
 WORKDIR /home/
 
 RUN git clone https://github.com/chreul/LAREX.git
+RUN ls
 RUN mvn clean install -f LAREX/Larex/pom.xml.
 RUN ln -s $PWD/LAREX/Larex/target/Larex.war /var/lib/tomcat7/webapps/Larex.war
 RUN systemctl enable tomcat7
